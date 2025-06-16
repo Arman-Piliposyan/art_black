@@ -47,7 +47,7 @@ export const FirstStep = () => {
           '@media (max-width: 1024px)': {
             width: '100%',
           },
-          backgroundColor: '#EDEFF7',
+          backgroundColor: '#000000',
           justifyContent: 'center',
           height: 'max-content',
           alignItems: 'center',
