@@ -1,0 +1,18 @@
+export const Colors = {
+  authContentBackgroundColor: '#004265',
+  muiDataGridBackground: '#081325',
+  simulacrumSecondary: '#757575',
+  mainBackgroundColor: '#101112',
+  rootBackgroundColor: '#000000',
+  simulacrumPrimary: '#1E1E1E',
+  placeholderColor: '#bdbdbd',
+  muiDefaultBlue: '#3475E1',
+  successGreen: '#43a047',
+  inputBorder: '#9e9e9e',
+  invalidRed: '#f44336',
+  cardGray: '#181818',
+  warning: '#ffd54f',
+  yellow: '#FDC30B',
+  white: '#FFFFFF',
+  black: '#000000',
+};
