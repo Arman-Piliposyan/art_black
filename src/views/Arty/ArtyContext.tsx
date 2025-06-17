@@ -13,11 +13,13 @@ type Props = {
 };
 
 export const ArtyContextProvider = ({ children }: Props): JSX.Element => {
+  const [userData, setUserData] = useState(null);
   const [imgURL, setImgURL] = useState('');
   const [base64URL, setBase64URL] = useState('');
   const [file, setFile] = useState<File | null>(null);
+  const [filesData, setFilesData] = useState<File | null>(null);
   const [imgURLLoading, setImgURLLoading] = useState(false);
-  const [showFirstPage, setShowFirstPage] = useState(true);
+  const [showFirstPage, setShowFirstPage] = useState(!localStorage.getItem('email'));
   const [imgFileLoading, setImgFileLoading] = useState(false);
   const [thirdSectionLoading, setThirdSectionLoading] = useState(true);
   const [imageAnalyticsData, setImageAnalyticsData] = useState(null);
@@ -37,11 +39,15 @@ export const ArtyContextProvider = ({ children }: Props): JSX.Element => {
     imgFileLoading,
     showFirstPage,
     imgURLLoading,
+    setFilesData,
     setChartData,
     setBase64URL,
+    setUserData,
+    filesData,
     chartData,
     base64URL,
     setImgURL,
+    userData,
     setFile,
     imgURL,
     file,

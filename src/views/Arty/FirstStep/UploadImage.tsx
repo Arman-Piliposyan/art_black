@@ -2,7 +2,6 @@ import { CircularProgress, Typography, TextField, Button, Box } from '@mui/mater
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import React from 'react';
 
-import { InputTypeFile } from './InputTypeFile';
 import { useArtyContext } from '../ArtyContext';
 
 import { saveImgUrl } from '/src/services/walleService';
@@ -81,7 +80,6 @@ export const UploadImage = () => {
       <Typography sx={{ my: '16px' }} fontWeight={500} fontSize={16}>
         OR
       </Typography> */}
-      <InputTypeFile />
     </Box>
   );
 };

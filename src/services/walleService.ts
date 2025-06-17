@@ -73,11 +73,53 @@ export const SubmitImgFile = async (data: FormData) => {
   }
 };
 
-export const getChartData = () => {
+// export const getChartData = () => {
+//   // eslint-disable-next-line no-useless-catch
+//   try {
+//     const response = createAxiosInstance().get(
+//       'https://simulacrum-service-walle.onrender.com/arty-traders/date-price-by-min-max',
+//     );
+//     return response;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+export const saveFile = async (data: FormData) => {
+  // eslint-disable-next-line no-useless-catch
+  try {
+    const axiosConfig = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    };
+
+    const response = await createAxiosInstance().post(
+      'https://app-top.simulacrumai.com/channel/addepar/upload-file',
+      data,
+      axiosConfig,
+    );
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getFilesData = () => {
+  // eslint-disable-next-line no-useless-catch
+  try {
+    const response = createAxiosInstance().get('https://app-top.simulacrumai.com/channel/addepar/files');
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getChartData = (id: number) => {
   // eslint-disable-next-line no-useless-catch
   try {
     const response = createAxiosInstance().get(
-      'https://simulacrum-service-walle.onrender.com/arty-traders/date-price-by-min-max',
+      `https://app-top.simulacrumai.com/channel/addepar/price-chart/${id}`,
     );
     return response;
   } catch (error) {
