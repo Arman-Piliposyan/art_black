@@ -23,10 +23,11 @@ export type FileDataType = {
 
 export const ImagesSection = () => {
   const { filesData } = useArtyContext();
+  console.log(filesData);
 
   return (
     <>
-      {filesData ? (
+      {filesData.length ? (
         <Box
           sx={{
             border: '1px solid white',
