@@ -62,7 +62,7 @@ export const FirstStep = () => {
   });
 
   const signInClick = async (loginData: IFormInputs): Promise<void> => {
-    if (loginData.email !== 'addepar@artytraders.com' && loginData.password !== 'VPAP25addepar!') {
+    if (loginData.email !== 'addepar@artytraders.com' || loginData.password !== 'VPAP25addepar!') {
       setError('email', { message: 'Wrong email', type: 'invalid' });
       return;
     }
